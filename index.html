@@ -1,22 +1,104 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DomGenie</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plugin Update Dashboard</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    .status {
+      font-weight: bold;
+    }
+    .outdated {
+      color: #dc3545;
+    }
+    .updated {
+      color: #28a745;
+    }
+    .admin-section {
+      width: 80%;
+      margin: 30px auto;
+      padding: 15px;
+      background-color: #fff3cd;
+      border: 1px solid #ffeeba;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Plugin Update Dashboard</h1>
 
-    <!-- Inside public/index.html -->
-<!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
- -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Mandali&display=swap&family=Montserrat:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <table>
+    <tr>
+      <th>Plugin Name</th>
+      <th>Current Version</th>
+      <th>Latest Version</th>
+      <th>Status</th>
+    </tr>
+    <tr>
+      <td>SEO Optimizer</td>
+      <td>2.3.1</td>
+      <td>2.5.0</td>
+      <td class="status outdated">Needs Update</td>
+    </tr>
+    <tr>
+      <td>Image Compressor</td>
+      <td>1.4.0</td>
+      <td>1.4.0</td>
+      <td class="status updated">Up-to-date</td>
+    </tr>
+    <tr>
+      <td>Security Suite</td>
+      <td>3.0.2</td>
+      <td>3.1.1</td>
+      <td class="status outdated">Needs Update</td>
+    </tr>
+  </table>
 
+  <div class="admin-section">
+    <h2>Admin Check</h2>
+    <p>Please verify these plugin updates with the admin before proceeding.</p>
+    <button onclick="alert('Request sent to admin for verification!')">Check with Admin</button>
+  </div>
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+</body>
 </html>
